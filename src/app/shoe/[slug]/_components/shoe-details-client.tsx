@@ -31,14 +31,14 @@ export default function ShoeDetailsClient({ shoe }: { shoe: Shoe }) {
             title: "Selection required",
             description: "Please select a size and color.",
             variant: "destructive",
-        })
+        });
         return;
     }
     toast({
         title: "Added to Cart",
         description: `${shoe.name} (Size: ${selectedSize}, Color: ${selectedColor}) has been added to your cart.`,
-    })
-  }
+    });
+  };
 
   return (
     <div className="space-y-6">

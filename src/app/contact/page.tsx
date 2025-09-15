@@ -13,10 +13,10 @@ import { useToast } from '@/hooks/use-toast';
 import { useState } from 'react';
 
 const contactFormSchema = z.object({
-  name: z.string().min(2, 'Name must be at least 2 characters.'),
-  email: z.string().email('Please enter a valid email address.'),
-  subject: z.string({ required_error: 'Please select a subject.' }),
-  message: z.string().min(10, 'Message must be at least 10 characters.'),
+  name: z.string().min(2, 'نام باید حداقل ۲ کاراکتر باشد.'),
+  email: z.string().email('لطفاً یک آدرس ایمیل معتبر وارد کنید.'),
+  subject: z.string({ required_error: 'لطفاً یک موضوع انتخاب کنید.' }),
+  message: z.string().min(10, 'پیام باید حداقل ۱۰ کاراکتر باشد.'),
 });
 
 type ContactFormValues = z.infer<typeof contactFormSchema>;
@@ -41,8 +41,8 @@ export default function ContactPage() {
     
     console.log(data);
     toast({
-      title: 'Message Sent!',
-      description: "We've received your message and will get back to you shortly.",
+      title: 'پیام ارسال شد!',
+      description: "پیام شما را دریافت کردیم و به زودی با شما تماس خواهیم گرفت.",
     });
     form.reset();
     setIsSubmitting(false);
@@ -53,8 +53,8 @@ export default function ContactPage() {
       <div className="max-w-2xl mx-auto">
         <Card>
           <CardHeader>
-            <CardTitle className="text-3xl">Contact Us</CardTitle>
-            <CardDescription>Have a question or need to make a return? Drop us a line.</CardDescription>
+            <CardTitle className="text-3xl">تماس با ما</CardTitle>
+            <CardDescription>سؤالی دارید یا نیاز به بازگشت کالا دارید؟ به ما پیام دهید.</CardDescription>
           </CardHeader>
           <CardContent>
             <Form {...form}>
@@ -64,9 +64,9 @@ export default function ContactPage() {
                   name="name"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Name</FormLabel>
+                      <FormLabel>نام</FormLabel>
                       <FormControl>
-                        <Input placeholder="Your Name" {...field} />
+                        <Input placeholder="نام شما" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -77,7 +77,7 @@ export default function ContactPage() {
                   name="email"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Email</FormLabel>
+                      <FormLabel>ایمیل</FormLabel>
                       <FormControl>
                         <Input placeholder="your.email@example.com" {...field} />
                       </FormControl>
@@ -90,18 +90,18 @@ export default function ContactPage() {
                   name="subject"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Subject</FormLabel>
+                      <FormLabel>موضوع</FormLabel>
                       <Select onValueChange={field.onChange} defaultValue={field.value}>
                         <FormControl>
                           <SelectTrigger>
-                            <SelectValue placeholder="Select a subject" />
+                            <SelectValue placeholder="یک موضوع انتخاب کنید" />
                           </SelectTrigger>
                         </FormControl>
                         <SelectContent>
-                          <SelectItem value="general-inquiry">General Inquiry</SelectItem>
-                          <SelectItem value="returns">Returns & Exchanges</SelectItem>
-                          <SelectItem value="order-status">Order Status</SelectItem>
-                          <SelectItem value="feedback">Feedback</SelectItem>
+                          <SelectItem value="general-inquiry">سوال عمومی</SelectItem>
+                          <SelectItem value="returns">مرجوعی و تعویض</SelectItem>
+                          <SelectItem value="order-status">وضعیت سفارش</SelectItem>
+                          <SelectItem value="feedback">بازخورد</SelectItem>
                         </SelectContent>
                       </Select>
                       <FormMessage />
@@ -113,16 +113,16 @@ export default function ContactPage() {
                   name="message"
                   render={({ field }) => (
                     <FormItem>
-                      <FormLabel>Message</FormLabel>
+                      <FormLabel>پیام</FormLabel>
                       <FormControl>
-                        <Textarea placeholder="Tell us how we can help..." className="min-h-[120px]" {...field} />
+                        <Textarea placeholder="به ما بگویید چگونه می‌توانیم کمک کنیم..." className="min-h-[120px]" {...field} />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
                   )}
                 />
                 <Button type="submit" className="w-full" disabled={isSubmitting}>
-                    {isSubmitting ? 'Sending...' : 'Send Message'}
+                    {isSubmitting ? 'در حال ارسال...' : 'ارسال پیام'}
                 </Button>
               </form>
             </Form>

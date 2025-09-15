@@ -29,7 +29,7 @@ type ShoePageProps = {
 export async function generateMetadata({ params }: ShoePageProps) {
   const shoe = getShoeBySlug(params.slug);
   if (!shoe) {
-    return { title: 'Shoe Not Found' };
+    return { title: 'کفش پیدا نشد' };
   }
   return {
     title: shoe.name,
@@ -77,13 +77,13 @@ export default function ShoePage({ params }: ShoePageProps) {
           <div className="space-y-2">
             <h1 className="text-4xl font-bold tracking-tight">{shoe.name}</h1>
             <div className="flex items-center gap-4">
-              <p className="text-3xl text-primary font-semibold">${shoe.price}</p>
+              <p className="text-3xl text-primary font-semibold">{shoe.price} تومان</p>
               {shoe.reviews.length > 0 && (
                 <div className="flex items-center gap-1">
                   {[...Array(5)].map((_, i) => (
                     <Star key={i} className={`h-5 w-5 ${i < Math.round(averageRating) ? 'text-amber-400 fill-amber-400' : 'text-muted-foreground'}`} />
                   ))}
-                  <span className="text-sm text-muted-foreground ml-1">({shoe.reviews.length} reviews)</span>
+                  <span className="text-sm text-muted-foreground ml-1">({shoe.reviews.length} نظر)</span>
                 </div>
               )}
             </div>
@@ -96,7 +96,7 @@ export default function ShoePage({ params }: ShoePageProps) {
       </div>
       <Separator className="my-12" />
       <div>
-        <h2 className="text-3xl font-bold mb-8">Customer Reviews</h2>
+        <h2 className="text-3xl font-bold mb-8">نظرات مشتریان</h2>
         {shoe.reviews.length > 0 ? (
           <div className="space-y-8">
             {shoe.reviews.map(review => (
@@ -110,7 +110,7 @@ export default function ShoePage({ params }: ShoePageProps) {
                       ))}
                     </div>
                   </div>
-                  <p className="text-xs text-muted-foreground">{new Date(review.date).toLocaleDateString()}</p>
+                  <p className="text-xs text-muted-foreground">{new Date(review.date).toLocaleDateString('fa-IR')}</p>
                 </CardHeader>
                 <CardContent>
                   <p className="text-sm text-muted-foreground">{review.comment}</p>
@@ -119,7 +119,7 @@ export default function ShoePage({ params }: ShoePageProps) {
             ))}
           </div>
         ) : (
-          <p className="text-muted-foreground">No reviews yet. Be the first to write one!</p>
+          <p className="text-muted-foreground">هنوز نظری ثبت نشده است. اولین نفر باشید!</p>
         )}
       </div>
     </div>

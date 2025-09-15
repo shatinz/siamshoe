@@ -41,13 +41,13 @@ export default function ShoeCard({ shoe }: ShoeCardProps) {
             data-ai-hint={shoe.images[0].hint}
           />
         </Link>
-        {shoe.isNew && <Badge className="absolute top-3 left-3">New</Badge>}
+        {shoe.isNew && <Badge className="absolute top-3 left-3">جدید</Badge>}
         <Button
           size="icon"
           variant="ghost"
           className="absolute top-2 right-2 rounded-full h-9 w-9 bg-background/70 hover:bg-background"
           onClick={handleWishlistToggle}
-          aria-label={isWishlisted ? 'Remove from wishlist' : 'Add to wishlist'}
+          aria-label={isWishlisted ? 'حذف از علاقه‌مندی‌ها' : 'افزودن به علاقه‌مندی‌ها'}
         >
           <Heart className={cn("h-5 w-5", isWishlisted ? 'fill-primary text-primary' : 'text-muted-foreground')} />
         </Button>
@@ -58,7 +58,7 @@ export default function ShoeCard({ shoe }: ShoeCardProps) {
           <p className="text-sm text-muted-foreground mt-1">{shoe.type}</p>
         </CardContent>
         <CardFooter>
-          <p className="text-lg font-bold text-primary">${shoe.price}</p>
+          <p className="text-lg font-bold text-primary">{shoe.price} تومان</p>
         </CardFooter>
       </Link>
     </Card>

@@ -20,7 +20,7 @@ export const WishlistProvider = ({ children }: { children: ReactNode }) => {
   useEffect(() => {
     setIsMounted(true);
     try {
-      const storedWishlist = localStorage.getItem('solemate_wishlist');
+      const storedWishlist = localStorage.getItem('siamshoe_wishlist');
       if (storedWishlist) {
         setWishlist(JSON.parse(storedWishlist));
       }
@@ -32,7 +32,7 @@ export const WishlistProvider = ({ children }: { children: ReactNode }) => {
   useEffect(() => {
     if (isMounted) {
       try {
-        localStorage.setItem('solemate_wishlist', JSON.stringify(wishlist));
+        localStorage.setItem('siamshoe_wishlist', JSON.stringify(wishlist));
       } catch (error) {
         console.error('Failed to save wishlist to localStorage', error);
       }
@@ -44,8 +44,8 @@ export const WishlistProvider = ({ children }: { children: ReactNode }) => {
       const newWishlist = [...new Set([...prev, shoeId])];
       if (newWishlist.length > prev.length) {
         toast({
-          title: 'Added to Wishlist',
-          description: `${shoeName} has been added to your wishlist.`,
+          title: 'به علاقه‌مندی‌ها اضافه شد',
+          description: `${shoeName} به علاقه‌مندی‌های شما اضافه شد.`,
         });
       }
       return newWishlist;
@@ -57,8 +57,8 @@ export const WishlistProvider = ({ children }: { children: ReactNode }) => {
       const newWishlist = prev.filter((id) => id !== shoeId);
       if (newWishlist.length < prev.length) {
         toast({
-          title: 'Removed from Wishlist',
-          description: `${shoeName} has been removed from your wishlist.`,
+          title: 'از علاقه‌مندی‌ها حذف شد',
+          description: `${shoeName} از علاقه‌مندی‌های شما حذف شد.`,
         });
       }
       return newWishlist;

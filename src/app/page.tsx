@@ -69,25 +69,25 @@ export default function Home() {
     <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
         <aside className="lg:col-span-1 bg-card p-6 rounded-lg shadow-sm h-fit">
-          <h2 className="text-2xl font-bold mb-6">Filters</h2>
+          <h2 className="text-2xl font-bold mb-6">فیلترها</h2>
           <div className="space-y-6">
             <div>
-              <Label htmlFor="sort-by" className="text-lg font-semibold">Sort By</Label>
+              <Label htmlFor="sort-by" className="text-lg font-semibold">مرتب سازی بر اساس</Label>
               <Select value={sort} onValueChange={setSort}>
                 <SelectTrigger id="sort-by" className="mt-2">
-                  <SelectValue placeholder="Sort by" />
+                  <SelectValue placeholder="مرتب سازی بر اساس" />
                 </SelectTrigger>
                 <SelectContent>
-                  <SelectItem value="popularity-desc">Popularity</SelectItem>
-                  <SelectItem value="price-asc">Price: Low to High</SelectItem>
-                  <SelectItem value="price-desc">Price: High to Low</SelectItem>
-                  <SelectItem value="newness-desc">Newest</SelectItem>
+                  <SelectItem value="popularity-desc">محبوبیت</SelectItem>
+                  <SelectItem value="price-asc">قیمت: کم به زیاد</SelectItem>
+                  <SelectItem value="price-desc">قیمت: زیاد به کم</SelectItem>
+                  <SelectItem value="newness-desc">جدیدترین</SelectItem>
                 </SelectContent>
               </Select>
             </div>
             <Separator />
             <div>
-                <h3 className="text-lg font-semibold mb-2">Type</h3>
+                <h3 className="text-lg font-semibold mb-2">نوع</h3>
                 <Select value={filters.type} onValueChange={(value) => handleFilterChange('type', value)}>
                     <SelectTrigger><SelectValue /></SelectTrigger>
                     <SelectContent>
@@ -96,7 +96,7 @@ export default function Home() {
                 </Select>
             </div>
             <div>
-              <h3 className="text-lg font-semibold mb-2">Price Range</h3>
+              <h3 className="text-lg font-semibold mb-2">محدوده قیمت</h3>
               <Slider
                 min={0}
                 max={500}
@@ -105,12 +105,12 @@ export default function Home() {
                 onValueChange={handlePriceChange}
               />
               <div className="flex justify-between text-sm text-muted-foreground mt-2">
-                <span>${filters.price[0]}</span>
-                <span>${filters.price[1]}</span>
+                <span>{filters.price[0]} تومان</span>
+                <span>{filters.price[1]} تومان</span>
               </div>
             </div>
             <div>
-              <h3 className="text-lg font-semibold mb-2">Colors</h3>
+              <h3 className="text-lg font-semibold mb-2">رنگ</h3>
               <Select value={filters.color} onValueChange={(value) => handleFilterChange('color', value)}>
                   <SelectTrigger><SelectValue /></SelectTrigger>
                   <SelectContent>
@@ -119,7 +119,7 @@ export default function Home() {
               </Select>
             </div>
             <div>
-              <h3 className="text-lg font-semibold mb-2">Sizes</h3>
+              <h3 className="text-lg font-semibold mb-2">سایز</h3>
                <Select value={filters.size} onValueChange={(value) => handleFilterChange('size', value)}>
                   <SelectTrigger><SelectValue /></SelectTrigger>
                   <SelectContent>
@@ -131,7 +131,7 @@ export default function Home() {
         </aside>
 
         <main className="lg:col-span-3">
-          <h1 className="text-4xl font-bold mb-8">Our Collection</h1>
+          <h1 className="text-4xl font-bold mb-8">کلکسیون ما</h1>
           {filteredAndSortedShoes.length > 0 ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
               {filteredAndSortedShoes.map((shoe) => (
@@ -140,7 +140,7 @@ export default function Home() {
             </div>
           ) : (
             <div className="text-center py-20">
-              <p className="text-xl text-muted-foreground">No shoes match your filters.</p>
+              <p className="text-xl text-muted-foreground">کفشی با فیلترهای شما مطابقت ندارد.</p>
             </div>
           )}
         </main>

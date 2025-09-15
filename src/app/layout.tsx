@@ -7,8 +7,8 @@ import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
   title: {
-    default: 'Sole Mate',
-    template: `%s | Sole Mate`,
+    default: 'Siam Shoe',
+    template: `%s | Siam Shoe`,
   },
   description: 'Find your perfect pair of shoes.',
   icons: {
@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full" suppressHydrationWarning>
+    <html lang="fa" dir="rtl" className="h-full" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

@@ -11,9 +11,9 @@ import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { useState } from 'react';
 
 const navLinks = [
-  { href: '/', label: 'Home' },
-  { href: '/recommendations', label: 'AI Recommendations' },
-  { href: '/contact', label: 'Contact' },
+  { href: '/', label: 'خانه' },
+  { href: '/recommendations', label: 'پیشنهاد هوش مصنوعی' },
+  { href: '/contact', label: 'تماس با ما' },
 ];
 
 export default function Header() {
@@ -40,7 +40,7 @@ export default function Header() {
         <div className="mr-4 hidden md:flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
             <Footprints className="h-6 w-6 text-primary" />
-            <span className="font-bold">Sole Mate</span>
+            <span className="font-bold">Siam Shoe</span>
           </Link>
           <nav className="flex items-center space-x-6">
             {navLinks.map((link) => (
@@ -55,13 +55,13 @@ export default function Header() {
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon">
                 <Menu />
-                <span className="sr-only">Open Menu</span>
+                <span className="sr-only">باز کردن منو</span>
               </Button>
             </SheetTrigger>
             <SheetContent side="left">
               <Link href="/" className="mr-6 flex items-center space-x-2 mb-6">
                 <Footprints className="h-6 w-6 text-primary" />
-                <span className="font-bold">Sole Mate</span>
+                <span className="font-bold">Siam Shoe</span>
               </Link>
               <nav className="flex flex-col space-y-4">
                 {navLinks.map((link) => (
@@ -87,7 +87,7 @@ export default function Header() {
                     </span>
                   )}
                 </div>
-                <span className="sr-only">Wishlist</span>
+                <span className="sr-only">علاقه‌مندی‌ها</span>
               </Link>
             </Button>
           </nav>

@@ -1,0 +1,88 @@
+{
+  "placeholderImages": [
+    {
+      "id": "urban-runner-1",
+      "description": "Side view of the Urban Runner X shoe.",
+      "imageUrl": "https://picsum.photos/seed/shoe1a/800/600",
+      "imageHint": "running shoe"
+    },
+    {
+      "id": "urban-runner-2",
+      "description": "Top view of the Urban Runner X shoe.",
+      "imageUrl": "https://picsum.photos/seed/shoe1b/800/600",
+      "imageHint": "shoe top"
+    },
+    {
+      "id": "urban-runner-3",
+      "description": "Detail shot of the Urban Runner X shoe's fabric.",
+      "imageUrl": "https://picsum.photos/seed/shoe1c/800/600",
+      "imageHint": "shoe fabric"
+    },
+    {
+      "id": "classic-loafer-1",
+      "description": "Three-quarter view of the Classic Loafer.",
+      "imageUrl": "https://picsum.photos/seed/shoe2a/800/600",
+      "imageHint": "leather loafer"
+    },
+    {
+      "id": "classic-loafer-2",
+      "description": "Front view of the Classic Loafer.",
+      "imageUrl": "https://picsum.photos/seed/shoe2b/800/600",
+      "imageHint": "formal shoe"
+    },
+    {
+      "id": "classic-loafer-3",
+      "description": "Detail of the stitching on the Classic Loafer.",
+      "imageUrl": "https://picsum.photos/seed/shoe2c/800/600",
+      "imageHint": "shoe stitching"
+    },
+    {
+      "id": "retro-sneaker-1",
+      "description": "Side profile of the Retro Sneaker '88.",
+      "imageUrl": "https://picsum.photos/seed/shoe3a/800/600",
+      "imageHint": "retro sneaker"
+    },
+    {
+      "id": "retro-sneaker-2",
+      "description": "A pair of Retro Sneaker '88s.",
+      "imageUrl": "https://picsum.photos/seed/shoe3b/800/600",
+      "imageHint": "sneakers pair"
+    },
+    {
+      "id": "retro-sneaker-3",
+      "description": "Close-up on the sole of the Retro Sneaker '88.",
+      "imageUrl": "https://picsum.photos/seed/shoe3c/800/600",
+      "imageHint": "shoe sole"
+    },
+    {
+      "id": "flex-trainer-1",
+      "description": "Dynamic angle of the Flex-Trainer Pro.",
+      "imageUrl": "https://picsum.photos/seed/shoe4a/800/600",
+      "imageHint": "gym shoe"
+    },
+    {
+      "id": "flex-trainer-2",
+      "description": "Top-down view of the Flex-Trainer Pro.",
+      "imageUrl": "https://picsum.photos/seed/shoe4b/800/600",
+      "imageHint": "training shoe"
+    },
+    {
+      "id": "flex-trainer-3",
+      "description": "Laces detail of the Flex-Trainer Pro.",
+      "imageUrl": "https://picsum.photos/seed/shoe4c/800/600",
+      "imageHint": "shoelaces"
+    },
+    {
+      "id": "sky-high-runner-1",
+      "description": "Side view of the Sky-High Runner.",
+      "imageUrl": "https://picsum.photos/seed/shoe5/800/600",
+      "imageHint": "blue sneaker"
+    },
+    {
+      "id": "city-walker-1",
+      "description": "View of the City Walker shoe.",
+      "imageUrl": "https://picsum.photos/seed/shoe6/800/600",
+      "imageHint": "casual shoe"
+    }
+  ]
+}

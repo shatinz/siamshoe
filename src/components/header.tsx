@@ -12,7 +12,7 @@ import { useState } from 'react';
 
 const navLinks = [
   { href: '/', label: 'خانه' },
-  { href: '/recommendations', label: 'پیشنهاد هوش مصنوعی' },
+  { href: '/recommendation', label: 'پیشنهاد هوش مصنوعی' },
   { href: '/contact', label: 'تماس با ما' },
 ];
 

@@ -738,7 +738,7 @@ const navLinks = [
         label: 'خانه'
     },
     {
-        href: '/recommendations',
+        href: '/recommendation',
         label: 'پیشنهاد هوش مصنوعی'
     },
     {

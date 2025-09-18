@@ -1,0 +1,9 @@
+{
+  "/_not-found/page": "/_not-found",
+  "/favicon.ico/route": "/favicon.ico",
+  "/contact/page": "/contact",
+  "/page": "/",
+  "/recommendations/page": "/recommendations",
+  "/wishlist/page": "/wishlist",
+  "/shoe/[slug]/page": "/shoe/[slug]"
+}
